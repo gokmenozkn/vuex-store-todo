@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { v4 as uuidv4 } from 'uuid';
+
 export default {
   name: "CreateTodo",
   data() {
@@ -20,7 +22,7 @@ export default {
     newTodo(task) {
       if (task === "") return;
       const newItem = {
-        id: this.$store.state.data.length + 1,
+        id: uuidv4(),
         completed: false,
         title: task,
       };

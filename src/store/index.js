@@ -33,6 +33,7 @@ const store = createStore({
   mutations: {
     newtodo(state, task) {
       state.data = [task, ...state.data];
+      console.log(state.data);
     },
     completeTodo(state, id) {
       var found = state.data.find((item) => item.id === id);
@@ -42,6 +43,9 @@ const store = createStore({
     },
     changeFilter(state, name) {
       state.filter = name;
+    },
+    removeTodo(state, id) {
+      state.data = state.data.filter((todo) => todo.id !== id);
     }
   },
   getters: {
