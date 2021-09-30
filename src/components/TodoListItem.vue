@@ -23,22 +23,24 @@
         <div>
           {{ todo.title }}
         </div>
-        <font-awesome-icon
+        <img
           @click="removeTodo(todo.id)"
           v-show="hovered === todo.id"
           :class="item.close_icon"
-          :icon="['far', 'window-close']"
+          src="./../assets/close.svg"
+          alt=""
         />
       </div>
       <div v-else :class="item.wrapper">
         <div>
           {{ todo.title }}
         </div>
-        <font-awesome-icon
+        <img
           @click="removeTodo(todo.id)"
           v-show="hovered === todo.id"
-          :icon="['far', 'window-close']"
           :class="item.close_icon"
+          src="./../assets/close.svg"
+          alt=""
         />
       </div>
     </div>
@@ -116,5 +118,7 @@ export default {
 
 .close_icon {
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 </style>

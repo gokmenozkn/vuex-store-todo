@@ -46,7 +46,10 @@ const store = createStore({
     },
     removeTodo(state, id) {
       state.data = state.data.filter((todo) => todo.id !== id);
-    }
+    },
+    clearCompleted(state) {
+      state.data = state.data.filter((todo) => !todo.completed);
+    },
   },
   getters: {
     activeTodosCount(state) {

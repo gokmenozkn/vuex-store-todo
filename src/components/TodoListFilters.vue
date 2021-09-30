@@ -7,7 +7,7 @@
         <span v-else>{{ name }}</span>
       </div>
     </div>
-    <div :class="$style.right">Clear Completed</div>
+    <div :class="$style.right" @click="clearCompleted">Clear Completed</div>
   </div>
 </template>
 
@@ -23,11 +23,14 @@ export default {
     },
     activeTodos() {
       return this.$store.getters.activeTodosCount;
-    }
+    },
   },
   methods: {
     changeFilter(name) {
-      return this.$store.commit("changeFilter", name);
+      this.$store.commit("changeFilter", name);
+    },
+    clearCompleted() {
+      this.$store.commit("clearCompleted");
     },
   },
 };
