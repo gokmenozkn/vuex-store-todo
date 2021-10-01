@@ -46,6 +46,8 @@ input {
   outline: none;
   color: #9fa1b8;
   font-size: 1.8rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
 
 input::placeholder {

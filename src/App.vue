@@ -1,4 +1,5 @@
 <template>
+  <div :class="$style.banner"></div>
   <div :class="$style.container">
     <h1 :class="$style.header">TODO</h1>
     <TodoList />
@@ -38,8 +39,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   background-color: #171823;
   color: #9fa1b8;
 }
@@ -52,20 +51,31 @@ a {
   text-decoration: none;
 }
 
+.banner {
+  background-color: chartreuse;
+  height: 30em;
+  background-image: url('./assets/images/bg-desktop-dark.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
-  margin-top: 4em;
-  width: 90vw;
+  margin: 0 auto;
+  transform: translateY(-20em);
+  padding: 0 1.4em;
 }
 
 .container > .header {
   font-size: 4rem;
   letter-spacing: 10px;
   margin-bottom: 1em;
+  color: #fff;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 960px) {
   .container {
-    width: 40vw;
+    max-width: 650px;
+    transform: translateY(-25em);
   }
 }
 </style>

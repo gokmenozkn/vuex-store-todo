@@ -47,9 +47,8 @@ export default {
   color: #5b5e7e;
   border-top: 1px solid #2e3046;
 }
-
 .mid {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1em;
 }
@@ -72,5 +71,15 @@ export default {
 
 .active {
   color: #3a7cfd;
+}
+
+@media (min-width: 960px) {
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mid {
+    display: flex;
+  }
 }
 </style>
