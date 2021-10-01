@@ -52,7 +52,6 @@ a {
 }
 
 .banner {
-  background-color: chartreuse;
   height: 30em;
   background-image: url('./assets/images/bg-desktop-dark.jpg');
   background-repeat: no-repeat;
